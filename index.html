@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <title>Sturlite | S Twist Surface Downlight</title>
+    </head>
+    <body style="font-family: 'Urbanist', sans-serif;">
+        <div class="row" style="margin-top: 3rem; padding: 2rem;">
+            <div class="col-lg-6">
+                <img id="imgOne" class="img w-100" src="1.jpg"/>
+                <img id="imgTwo" class="img w-100 d-none" src="2.jpg"/>
+                <img id="imgThree" class="img w-100 d-none" src="3.jpg"/>
+                <div class="d-flex justify-content-center" style="margin-top: 1rem;">
+                    <div class="form-check form-switch" style="margin-left: 1rem;">
+                        <input class="form-check-input switch" type="checkbox" id="one" data-img="imgOne" checked>
+                        <label class="form-check-label" for="one">Natural</label>
+                    </div>
+                    <div class="form-check form-switch" style="margin-left: 1rem;">
+                        <input class="form-check-input switch" type="checkbox" data-img="imgTwo" id="two">
+                        <label class="form-check-label" for="two">White</label>
+                    </div>
+                    <div class="form-check form-switch" style="margin-left: 1rem;">
+                        <input class="form-check-input switch" type="checkbox" id="three" data-img="imgThree">
+                        <label class="form-check-label" for="three">Yellow</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center" style="margin-top: 1rem">
+                <h2 class="text-center" style="margin-bottom: 2rem">S Twist Surface Downlight</h2>
+                <p>
+                    Joyce junction box downlight features 3 in 1 clear & intense lighting, color changing for an amazing selection of ambiance. This downlight allows you to set the right atmosphere for different moods.
+                </p>
+                <ul>
+                    <li>Compact Design (Easy Installation)
+                    <li>High efficacy LED (80lm/W)</li>
+                    <li>Aluminum heat sink</li>
+                    <li>2.5Kv surge & inrush protection</li>
+                    <li>Suitable for 3-inch junction box</li>
+                </ul>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <script type="application/javascript">
+            $(document).on('change', '.switch', function() {
+                if ($(this).prop('checked')) {
+                    $('.switch').prop('checked', false);
+                    $(this).prop('checked', true);
+                    $('.img').addClass('d-none');
+                    $(`#${$(this).data('img')}`).removeClass('d-none');
+                }
+            })
+        </script>
+    </body>
+</html>
