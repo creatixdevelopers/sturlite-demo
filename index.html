@@ -15,21 +15,7 @@
         <div class="row" style="margin-top: 3rem; padding: 2rem;">
             <div class="col-lg-6">
                 <img id="imgOne" class="img w-100" src="1.jpg"/>
-                <img id="imgTwo" class="img w-100 d-none" src="2.jpg"/>
-                <img id="imgThree" class="img w-100 d-none" src="3.jpg"/>
                 <div class="d-flex justify-content-center" style="margin-top: 1rem;">
-                    <div class="form-check form-switch" style="margin-left: 1rem;">
-                        <input class="form-check-input switch" type="checkbox" id="one" data-img="imgOne" checked>
-                        <label class="form-check-label" for="one">Natural</label>
-                    </div>
-                    <div class="form-check form-switch" style="margin-left: 1rem;">
-                        <input class="form-check-input switch" type="checkbox" data-img="imgTwo" id="two">
-                        <label class="form-check-label" for="two">White</label>
-                    </div>
-                    <div class="form-check form-switch" style="margin-left: 1rem;">
-                        <input class="form-check-input switch" type="checkbox" id="three" data-img="imgThree">
-                        <label class="form-check-label" for="three">Yellow</label>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-6 d-flex flex-column justify-content-center" style="margin-top: 1rem">
@@ -44,21 +30,13 @@
                     <li>2.5Kv surge & inrush protection</li>
                     <li>Suitable for 3-inch junction box</li>
                 </ul>
+	            <a class="btn btn-primary" href="demo.html" style="width: fit-content; background-color: #f1824c; border: none; border-radius: 25px">
+		            View Variants
+	            </a>
             </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-        <script type="application/javascript">
-            $(document).on('change', '.switch', function() {
-                if ($(this).prop('checked')) {
-                    $('.switch').prop('checked', false);
-                    $(this).prop('checked', true);
-                    $('.img').addClass('d-none');
-                    $(`#${$(this).data('img')}`).removeClass('d-none');
-                }
-            })
-        </script>
     </body>
 </html>
